@@ -1,0 +1,14 @@
+{
+    "short_name": "acio21paint",
+    "problem_name": "Purchasing Paint",
+    "subtask_points": [
+        10, 20, 10, 30, 15, 15
+    ],
+    "timelimit": 1.0,
+    "memlimit": 512.0,
+    "cms": {
+        "name": "messaging",
+        "timelimit": 1.0,
+        "memlimit": 512.0
+    }
+}

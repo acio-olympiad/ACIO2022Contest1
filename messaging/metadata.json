@@ -1,0 +1,14 @@
+{
+    "short_name": "acio21messaging",
+    "problem_name": "Range Messaging",
+    "subtask_points": [
+        10, 17, 25, 15, 33
+    ],
+    "timelimit": 1.0,
+    "memlimit": 512.0,
+    "cms": {
+        "name": "messaging",
+        "timelimit": 1.0,
+        "memlimit": 512.0
+    }
+}

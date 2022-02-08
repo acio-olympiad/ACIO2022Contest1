@@ -1,0 +1,15 @@
+{
+    "short_name": "acio21squirrel",
+    "problem_name": "Squirrel Postal Service",
+    "subtask_points": [
+        35, 50, 15
+    ],
+    "timelimit": 1.0,
+    "memlimit": 512.0,
+    "cms": {
+        "name": "squirrel",
+        "timelimit": 1.0,
+        "memlimit": 512.0
+    }
+}
+

@@ -1,0 +1,105 @@
+\documentclass{article}
+\usepackage{multicol}
+\usepackage[utf8]{inputenc}
+\usepackage[textwidth=460pt, voffset=0pt]{geometry}
+\usepackage{fancyhdr}
+\begin{document}
+\title{\vspace{-5ex}Purchasing Paint}
+\author{\vspace{-5ex}}
+\date{\vspace{-5ex}}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{ACIO 2022 Contest 1}
+\rfoot{Page \thepage}
+
+\begin{center}
+\huge{Purchasing Paint}\small\\
+\vspace{5ex}
+\begin{tabular}{|c|c|}
+\hline
+Time Limit & Memory Limit \\
+\hline
+1 second & 512 MB \\
+
+\hline
+\end{tabular}
+\end{center}
+\section*{Statement}
+Ryan is a professional painter looking to buy new paints.\\
+
+The arts and crafts store sells $N$ different pots of paint, the $i$th paint pot having colour $d_i$ and cost $c_i$. There are $D$ different colours in total. The store does not allow you to buy two pots of paint that are the same colour.\\
+
+Ryan  wants to buy as many colours of paint as possible, and then among these options, to minimise the sum of costs. He lists all his options and sorts them in descending order by the number of colours of paint purchased, breaking ties by cost ascending. In Ryan's $K$th best option, how many cans of paint would he buy, and what is the total cost?\\
+
+Two options are considered different if there is a can of paint bought in one option but not the other. Note that not buying anything is also considered an option. Also note that there may be situations in which two different options have the same colour count and cost. They should be counted as separate options.
+
+\section*{Input}
+The first line of input contains the three space-separated integers $N$ $K$ $D$. \\
+
+The next $N$ lines of input contain two space-separated integers $d_i$ and $c_i$, representing the colour and cost of the $i$th pot of paint.
+
+\section*{Output}
+The number of colours of paint in the $K$th best option, followed by its total cost.
+
+\begin{multicols}{2}
+\section*{Sample Input 1}
+{\tt
+7 2 2\\
+1 92\\
+2 43\\
+2 6\\
+1 100\\
+1 63\\
+1 83\\
+2 67\\
+}
+
+\columnbreak
+\section*{Sample Output 1}
+{\tt
+2 89
+}
+\end{multicols}
+
+\newpage
+\begin{multicols}{2}
+\section*{Sample Input 2}
+{\tt
+7 14 2\\
+1 92\\
+2 43\\
+2 6\\
+1 100\\
+1 63\\
+1 83\\
+2 67\\
+}
+\columnbreak
+\section*{Sample Output 2}
+{\tt
+1 43
+}
+\end{multicols}
+
+\section*{Constraints}
+\begin{itemize}
+\item $1 \le D \le N \le 2\times10^3$
+\item $1 \le K \le \min($number of options$, 2\times10^3)$
+\item $1 \le c_i \le 10^9$
+\item $1 \le d_i \le D$
+\end{itemize}
+
+\section*{Subtasks}
+\begin{tabular}{l*{6}{c}r}
+Number & Points & Other constraints\\
+\hline
+1 & 10 & $K = 1$\\
+2 & 20 & $K = 2$ \\
+3 & 10 & $N \le 18$\\
+4 & 30 & (see below)\\
+5 & 15 & $N, K, D \le 300$ \\
+6 & 15 & No additional constraints
+\end{tabular} \\
+
+Additionally, for Subtask 4, the number of cans of paint in the $K$th best option is $D$ and the total cost of the $K$th best option $\le 2\times 10^3$.
+\end{document}

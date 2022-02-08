@@ -1,0 +1,104 @@
+\documentclass{article}
+\usepackage{multicol}
+\usepackage[utf8]{inputenc}
+\usepackage[textwidth=460pt, voffset=0pt]{geometry}
+\usepackage{fancyhdr}
+\begin{document}
+\title{\vspace{-5ex}Squirrel Postal Service}
+\author{\vspace{-5ex}}
+\date{\vspace{-5ex}}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{ACIO 2022 Contest 1}
+\rfoot{Page \thepage}
+
+\begin{center}
+\huge{Squirrel Postal Service}\small\\
+\vspace{5ex}
+\begin{tabular}{|c|c|}
+\hline
+Time Limit & Memory Limit \\
+\hline
+1 second & 512 MB \\
+
+\hline
+\end{tabular}
+\end{center}
+\section*{Statement}
+Lisa, the operations manager for the Squirrel Postal Service, needs your help! \\
+
+The Squirrel Postal Service delivers items across the whole town, which can be
+described as $N$ huts (numbered $1$ through $N$) with $N-1$ bidirectional roads connecting them, such that
+you can reach any hut from any other hut by travelling along one or more of the
+roads. \\
+
+The Squirrel Postal Service has $N$ deliveries today, each going to a different
+hut. A route is any sequence of huts such that each adjacent
+pair of huts in the sequence is connected by a road. As such, Lisa wants to find length of the shortest
+route that starts at the main depot (hut $1$) and passes through every
+hut in town. \\
+
+Can you help Lisa by outputting the number of huts in the shortest route starting at hut 1
+and passing through all other huts?
+
+\section*{Input}
+The first line contains the integer $N$. \\
+
+The next $N-1$ lines contain two integers each, representing a pair of huts connected
+by road.
+
+\section*{Output}
+Output one integer, the number of huts in the shortest route as described in the Statement section.
+
+\begin{multicols}{2}
+\section*{Sample Input 1}
+{\tt
+6\\
+1 3\\
+1 6\\
+4 3\\
+2 5\\
+3 2}
+\columnbreak
+\section*{Sample Output 1}
+{\tt
+8
+}
+\end{multicols}
+\newpage
+\begin{multicols}{2}
+\section*{Sample Input 2}
+{\tt
+5\\
+5 1\\
+1 2\\
+2 3\\
+3 4
+}
+\columnbreak
+\section*{Sample Output 2}
+{\tt
+6
+}
+\end{multicols}
+
+\section*{Explanation}
+\begin{itemize}
+\item For the first example, the shortest route is 1, 6, 1, 3, 4, 3, 2, 5.
+\item For the second example, the shortest route is 1, 5, 1, 2, 3, 4.
+\end{itemize}
+
+\section*{Constraints}
+\begin{itemize}
+\item $1 \le N \le 10^5$
+\end{itemize}
+
+\section*{Subtasks}
+\begin{tabular}{l*{6}{c}r}
+Number & Points & Other constraints\\
+\hline
+1 & 35 & $N \le 1000$ \\
+2 & 50 & Each hut is connected to at most 2 other huts. That is, the town is a line. \\
+3 & 15 & No further constraints.
+\end{tabular}
+\end{document}
